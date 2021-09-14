@@ -2,10 +2,10 @@ package raum.muchbeer.bettertestktx
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import raum.muchbeer.bettertestktx.databinding.ActivityAddBinding
@@ -18,10 +18,14 @@ class AddActivity : AppCompatActivity() {
     private val viewModel: AddViewModel by viewModels()
     private lateinit var binding : ActivityAddBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,
-           R.layout.activity_add)
+        binding = ActivityAddBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+     //   DataBindingUtil.setContentView(this,   R.layout.activity_add)
 
         constant()
         saveTask()

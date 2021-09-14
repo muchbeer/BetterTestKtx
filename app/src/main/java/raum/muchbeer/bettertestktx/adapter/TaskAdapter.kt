@@ -19,7 +19,7 @@ class TaskAdapter(val clickListener: (String)->Unit) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskVH {
 
-        val itemView = TodoItemBinding.inflate(LayoutInflater.from(parent.context),
+        val itemView = TodoItemBinding.inflate(  LayoutInflater.from(parent.context),
                         parent, false)
 
         return TaskVH(itemView)
