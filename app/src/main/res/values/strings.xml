@@ -8,4 +8,5 @@
     <string name="set_due_date">Set Due Date</string>
     <string name="add">Add Todo</string>
     <string name="due_soon">Due Soon:</string>
+    <string name="testing">Test</string>
 </resources>
